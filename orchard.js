@@ -50,11 +50,25 @@ const pinkPrice = .55
 */
 
 // CODE HERE
-
-
-
-
-
+let totalFuji = 0;
+let totalGala = 0;
+let totalPink = 0;
+let totalAcres = 0;
+for (let i = 0; i < fujiAcres.length; i++){
+    totalFuji += fujiAcres[i];
+}
+for (let k = 0; k < galaAcres.length; k++){
+    totalGala += galaAcres[k];
+}
+for (let j = 0; j < pinkAcres.length; j++){
+    totalPink += pinkAcres[j];
+    
+}
+let combined = [totalFuji, totalGala, totalPink]
+for (let h = 0; h < combined.length; h++){
+    totalAcres += combined[h];
+}
+console.log(totalAcres)
 // PROBLEM 2
 
 /*
@@ -69,9 +83,8 @@ const pinkPrice = .55
 
 // CODE HERE
 
-
-
-
+let averageDailyAcres = (totalAcres / 7);
+console.log(averageDailyAcres);
 
 // PROBLEM 3
 
@@ -107,7 +120,10 @@ let days = 0
 
 // CODE HERE
 
-
+while (acresLeft > 0){
+    acresLeft -= averageDailyAcres; days ++;
+}
+console.log(days)
 
 // PROBLEM 4
 
@@ -135,14 +151,30 @@ let days = 0
 
 // CODE HERE
 
-// let fujiTons =
-// let galaTons =
-// let pinkTons =
+ let fujiTons = fujiAcres.slice(0, fujiAcres.length);
+let galaTons = galaAcres.slice(0, galaAcres.length);
+let pinkTons = pinkAcres.slice(0, pinkAcres.length);
+// let fuji = fujiAcres.slice(0, fujiAcres.length);
+// console.log(fuji)
+// let gala = galaAcres.slice(0, galaAcres.length);
+// console.log(gala)
+// let pink = pinkAcres.slice(0, pinkAcres.length);
+// console.log(pink)
 
+for (let i = 0; i < fujiTons.length; i++){
+    fujiTons[i] = fujiTons[i] * 6.5
+}
+console.log(fujiTons)
 
+for (let i = 0; i < galaTons.length; i++){
+    galaTons[i] = galaTons[i] * 6.5
+}
+console.log(galaTons)
 
-
-
+for (let i = 0; i < pinkTons.length; i++){
+    pinkTons[i] = pinkTons[i] *6.5
+}
+console.log(pinkTons)
 
 // PROBLEM 5
 
@@ -162,11 +194,25 @@ let days = 0
 
 // CODE HERE 
 
-// let fujiPounds =
-// let galaPounds =
-// let pinkPounds =
+let fujiPounds = fujiAcres.slice(0, fujiAcres.length);
+let galaPounds = galaAcres.slice(0, galaAcres.length);
+let pinkPounds = pinkAcres.slice(0, pinkAcres.length);
 
 
+for (let i = 0; i < fujiTons.length; i++){
+    fujiTons[i] = fujiTons[i] * 6.5
+}
+console.log(fujiTons)
+
+for (let i = 0; i < galaTons.length; i++){
+    galaTons[i] = galaTons[i] * 6.5
+}
+console.log(galaTons)
+
+for (let i = 0; i < pinkTons.length; i++){
+    pinkTons[i] = pinkTons[i] *6.5
+}
+console.log(pinkTons)
 
 
 
