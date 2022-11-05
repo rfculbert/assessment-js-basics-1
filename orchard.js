@@ -199,20 +199,20 @@ let galaPounds = galaAcres.slice(0, galaAcres.length);
 let pinkPounds = pinkAcres.slice(0, pinkAcres.length);
 
 
-for (let i = 0; i < fujiTons.length; i++){
-    fujiTons[i] = fujiTons[i] * 6.5
+for (let i = 0; i < fujiPounds.length; i++){
+    fujiPounds[i] = fujiPounds[i] * 2000
 }
-console.log(fujiTons)
+console.log(fujiPounds)
 
-for (let i = 0; i < galaTons.length; i++){
-    galaTons[i] = galaTons[i] * 6.5
+for (let i = 0; i < galaPounds.length; i++){
+    galaPounds[i] = galaPounds[i] * 2000
 }
-console.log(galaTons)
+console.log(galaPounds)
 
-for (let i = 0; i < pinkTons.length; i++){
-    pinkTons[i] = pinkTons[i] *6.5
+for (let i = 0; i < pinkPounds.length; i++){
+    pinkPounds[i] = pinkPounds[i] * 2000
 }
-console.log(pinkTons)
+console.log(pinkPounds)
 
 
 
@@ -238,12 +238,28 @@ console.log(pinkTons)
 // let fujiProfit =
 // let galaProfit =
 // let pinkProfit =
+let fujiApples = 0;
+let galaApples = 0;
+let pinkApples = 0;
 
-
-
-
-
-
+for (let i = 0; i < fujiPounds.length; i++){
+    fujiApples += fujiPounds[i];
+}
+for (let i = 0; i < galaPounds.length; i++){
+    galaApples += galaPounds[i];
+}
+for (let i = 0; i < pinkPounds.length; i++){
+    pinkApples += pinkPounds[i]
+}
+// console.log(fujiApples)
+// console.log(galaApples)
+// console.log(pinkApples)
+let fujiProfit = fujiApples *= fujiPrice
+let galaProfit = galaApples *= galaPrice
+let pinkProfit = pinkApples *= pinkPrice
+console.log(fujiProfit)
+console.log(galaProfit)
+console.log(pinkProfit)
 // PROBLEM 7
 
 /*
@@ -255,3 +271,9 @@ console.log(pinkTons)
 */
 
 // CODE HERE
+let totalProfit = 0;
+let combo = [fujiProfit, galaProfit, pinkProfit]
+for(i = 0; i < combo.length; i++){
+    totalProfit += combo[i];
+}
+console.log(totalProfit)
